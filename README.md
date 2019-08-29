@@ -5,14 +5,8 @@ Download this using git clone:
 
 ```git clone https://github.com/keezel-co/cableguard_docker.git```
 
-Execute in docker server
-------------------------
-
-This allow to execute wgpt config server part in docker.
-
-To fech submodules type:
-
-```./fetch_latest.sh```
+To execute it
+-------------
 
 To run it type:
 
@@ -21,6 +15,5 @@ To run it type:
 And wgpt should be accesible at ports:
 --------------------------------------
 
- - 2080: Plain HTTP: Control panel.
- - 2443: HTTPS: Register API.
- - 3443: HTTPS using ssl client certificate: Data download API.
+ - 1443: HTTPS: Main API
+ - 2443: HTTPS: Config deliverer API
