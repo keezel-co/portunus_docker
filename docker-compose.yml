@@ -1,8 +1,8 @@
 version: '3.7'
 
 services:
-  cableguard_api:
-    build: ./cableguard_api
+  portunus_api:
+    build: ./portunus_api
     environment:
       FLASK_APP: wgpt.py
       DATABASE_URL: "mysql+pymysql://wgpt:wgptpassword@db/wgpt"
@@ -11,10 +11,10 @@ services:
     depends_on:
       - db
     volumes:
-      - ./cableguard_api/config.py:/wgpt/config.py
+      - ./portunus_api/config.py:/wgpt/config.py
 
-  cableguard_cd:
-    build: ./cableguard_cd
+  portunus_cd:
+    build: ./portunus_cd
     environment:
       FLASK_APP: wgpt_cd.py
       DATABASE_URL: "mysql+pymysql://wgpt:wgptpassword@db/wgpt"
@@ -27,7 +27,7 @@ services:
     depends_on:
       - db
     volumes:
-      - ./cableguard_cd/config.py:/wgpt/config.py
+      - ./portunus_cd/config.py:/wgpt/config.py
       - certs:/certs
 
   webserver:
@@ -43,8 +43,8 @@ services:
       - "1443:1443"
       - "2443:2443"
     depends_on:
-      - cableguard_api
-      - cableguard_cd
+      - portunus_api
+      - portunus_cd
     volumes:
       - ./webserver/nginx.conf:/nginx.conf
       - certs:/certs

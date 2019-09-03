@@ -1,10 +1,10 @@
 #!/bin/sh
 
-mkdir -p cableguard_api cableguard_cd
-cd cableguard_api
+mkdir -p portunus_api portunus_cd
+cd portunus_api
 git checkout master
 git pull
 cd ..
-cd cableguard_cd
+cd portunus_cd
 git checkout master
 git pull
