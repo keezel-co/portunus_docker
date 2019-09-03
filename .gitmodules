@@ -1,6 +1,6 @@
 [submodule "portunus_api"]
-	path = cableguard_api
+	path = portunus_api
 	url = https://github.com/keezel-co/portunus_api.git
-[submodule "portonus_cd"]
-	path = cableguard_cd
+[submodule "portunus_cd"]
+	path = portunus_cd
 	url = https://github.com/keezel-co/portunus_cd.git
